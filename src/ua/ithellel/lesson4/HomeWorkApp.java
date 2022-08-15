@@ -79,8 +79,8 @@ public class HomeWorkApp {
     //8. Написать метод, которому в качестве параметра передается целое число. Метод должен вернуть true, если число отрицательное, и вернуть false если положительное.
     public static boolean boolNumb1(int a) {
         System.out.println("                  TASK-8");
-            return (a < 0);
-        }
+        return (a < 0);
+    }
 
 
     //9. Написать метод, которому в качестве аргументов передается строка и число, метод должен отпечатать в консоль указанную строку, указанное количество раз;
@@ -97,7 +97,7 @@ public class HomeWorkApp {
     public static boolean checkYear2(int a) {
         System.out.println("                  TASK-10");
         return (((a % 4 == 0) && (a % 100 != 0)) || (a % 400 == 0));
-        }
     }
+}
 
 

@@ -3,3 +3,6 @@
 .out
 *.class
 *.iml
+.out
+*.class
+*.iml
