@@ -1,15 +1,17 @@
 public class Car {
-    private void startElectricity(){
+    private void startElectricity() {
         System.out.println("Electricity On");
     }
-    private void startCommand(){
+
+    private void startCommand() {
         System.out.println("Command On");
     }
-    private void startFuelSystem(){
+
+    private void startFuelSystem() {
         System.out.println("Fuel System Nn");
     }
 
-    public void start(){
+    public void start() {
         startElectricity();
         startCommand();
         startFuelSystem();
