@@ -15,7 +15,9 @@ public class Application {
         cat.swim(20);
 
 
-        System.out.println(cat.countCat + dog.countDog);
+        int countAnimal;
+        countAnimal = Cat.getCountCat() + Dog.getCountDog();
+        System.out.println("You have created " + Cat.getCountCat() + " cats and " + Dog.getCountDog() + " dogs, which are " + countAnimal + " animals.");
 
     }
 }

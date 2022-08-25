@@ -5,12 +5,20 @@ public class Cat extends Animal {
     String name;
     int maxRun = 200;
     int maxSwim = 0;
-    public static int countCat = 0;
+    private static int countCat = 0;
 
     public Cat(String name) {
         super(name);
         this.name = name;
-        countCat++;
+        setCountCat(getCountCat() + 1);
+    }
+
+    public static int getCountCat() {
+        return countCat;
+    }
+
+    public static void setCountCat(int countCat) {
+        Cat.countCat = countCat;
     }
 
     @Override

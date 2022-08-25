@@ -6,12 +6,20 @@ public class Dog extends Animal {
     int maxSwim = 10;
     String name;
 
-    public static int countDog = 0;
+    private static int countDog = 0;
 
     public Dog(String name) {
         super(name);
         this.name = name;
-        countDog++;
+        setCountDog(getCountDog() + 1);
+    }
+
+    public static int getCountDog() {
+        return countDog;
+    }
+
+    public static void setCountDog(int countDog) {
+        Dog.countDog = countDog;
     }
 
     @Override
