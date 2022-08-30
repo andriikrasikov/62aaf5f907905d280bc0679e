@@ -1,44 +1,49 @@
 package ua.Ithillel.Java.Lesson8.Homework.Game;
 
-public class Cat extends Competitor{
-    private int maxLength;
-    private int maxHeight;
+public class Cat implements Competitor {
+    private String name;
+    private int maxRunningLength;
+    private int maxJumpingHeight;
 
-    public Cat(String name, int maxLength, int maxHeight) {
-        super(name);
-        this.maxLength = maxLength;
-        this.maxHeight = maxHeight;
+    public Cat(int maxRunningLength, int maxJumpingHeight, String name) {
+        this.name = name;
+        this.maxRunningLength = maxRunningLength;
+        this.maxJumpingHeight = maxJumpingHeight;
     }
 
     public String getName() {
         return name;
     }
 
-    public int getMaxLength() {
-        return maxLength;
+    public void setName(String name) {
+        this.name = name;
     }
 
-    public void setMaxLength(int maxLength) {
-        this.maxLength = maxLength;
+    public int getMaxRunningLength() {
+        return maxRunningLength;
     }
 
-    public int getMaxHeight() {
-        return maxHeight;
+    public void setMaxRunningLength(int maxRunningLength) {
+        this.maxRunningLength = maxRunningLength;
     }
 
-    public void setMaxHeight(int maxHeight) {
-        this.maxHeight = maxHeight;
+    public int getMaxJumpingHeight() {
+        return maxJumpingHeight;
     }
 
+    public void setMaxJumpingHeight(int maxJumpingHeight) {
+        this.maxJumpingHeight = maxJumpingHeight;
+    }
+
+    @Override
     public void run() {
-        System.out.println(this.name + " is running(his max running length is "+ this.maxLength + " metres)");
+        System.out.print(this.name + " ran ");
+
     }
 
+    @Override
     public void jump() {
-        System.out.println(this.name + " is jumping(his max jumping height is "+ this.maxHeight + " metres)");
+        System.out.print(this.name + " has jumped ");
+
     }
-
-
-
 }
-

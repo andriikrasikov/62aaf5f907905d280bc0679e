@@ -1,19 +1,17 @@
 package ua.Ithillel.Java.Lesson8.Homework.Game;
 
-public abstract class Competitor {
-    static String name;
+public interface Competitor {
 
-    public Competitor(String name) {
-        Competitor.name = name;
-    }
 
-    public String getName() {
-        return name;
-    }
+    int getMaxJumpingHeight();
 
-    public abstract void run();
+    int getMaxRunningLength();
 
-    public abstract void jump();
+    String getName();
+
+    void run();
+
+    void jump();
 }
 
 
