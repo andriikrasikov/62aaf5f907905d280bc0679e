@@ -10,7 +10,7 @@ public class Application {
 
         //1
         List<String> words = new ArrayList<>();
-        Collections.addAll(words, "Seems", "like", "I", "am", "totally", "lagged", "behind", "group", "and", "have", "no", "idea", "how", "to", "catch", "up");
+        Collections.addAll(words, "Seems", "like", "I", "am", "totally", "lagged", "behind", "group", "and", "have", "no", "idea", "how", "to", "catch", "it", "up");
         countOccurance(words, "I");
         //2
         Integer[] array = {1, 1, 2, 3, 4, 5, 6, 7, 8, 9};
@@ -19,6 +19,7 @@ public class Application {
         System.out.println(findUnique(toList(array)));
         //4
         calcOccurance(words);
+        findOccurance(words);
     }
 
     //1
@@ -50,14 +51,25 @@ public class Application {
         }
     }
 
-    public static void findOccurance (List<String> x){
-        Map<String, Integer> hm = new HashMap<String, Integer>();
-        for (String i : list) {
-            Integer j = hm.get(i);
-            hm.put(i, (j == null) ? 1 : j + 1);
+    public static List<String> findOccurance(List<String> words) {
+        Collections.sort(words);
+        String str1 = words.get(0);
+        int occurance = 1;
+        List<String> names2 = new ArrayList<>();
+        for (int i = 1; i < words.size(); i++) {
+            String str2 = words.get(i);
+            if (str1.equals(str2)) {
+                occurance++;
+            } else {
+                names2.add("{name: " + str1 + " , occurance " + occurance + "}");
+                occurance = 1;
+                str1 = str2;
+            }
         }
+        names2.add("{name: " + str1 + " , occurance " + occurance + "}");
+        names2.forEach(System.out::println);
+        return names2;
     }
-
 
 }
 
