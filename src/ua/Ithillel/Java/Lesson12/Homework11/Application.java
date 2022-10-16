@@ -3,7 +3,6 @@ package ua.Ithillel.Java.Lesson12.Homework11;
 import java.util.Arrays;
 import java.util.List;
 
-import static ua.Ithillel.Java.Lesson12.Homework11.ArrayValueCalculator.doCalc;
 
 public class Application {
     public static void main(String[] args) {
@@ -12,7 +11,7 @@ public class Application {
 
         for (Object s : list) {
             try {
-                doCalc((String[][]) s);
+                ArrayValueCalculator.doCalc((String[][]) s);
             } catch (MyArraySizeException | MyArrayDataException e) {
                 System.out.println(e.getMessage());
                 System.out.println("Exception was processed. Program continues");
